@@ -1,21 +1,51 @@
 /* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto+Mono:wght@300;400;500;700&display=swap');
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    font-family: Arial, sans-serif;
+    background-color: #CBC5EA;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
 }
-header, section {
-    padding: 20px;
+header {
+    padding: 10px;
 }
-p, li {
-    line-height: 1.5em;
+
+section{
+    margin-left: 30px;
+    padding: 10px;
+}
+
+h4 {
+    margin-left: 25px;
+    line-height: 2em;
+}
+header{
+    font-family: 'Poiret One', monospace;
 }
 
 #inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background-color: #44FFD2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#tutorials {
+    background-color: #FFB86F;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#homework {
+    background-color: #E0CA3C;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#lectures {
+    background-color: #B6B8D6;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
