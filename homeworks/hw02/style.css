@@ -1,0 +1,309 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+header {
+    background: #111;
+    position: fixed;
+    width: calc(100vw - 250px);
+    left: 250px;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+aside{
+    padding: 15px;
+    padding-top: 2px;
+}
+
+h1 {
+    padding-bottom: 5px;
+}
+
+a, a:visited, a:active {
+    padding: 10px;
+    padding-left: 14px;
+    color: #919191; 
+}
+
+a:hover { 
+    color: #fff;
+    text-decoration: none;
+}
+
+aside a i {
+    padding-right: 15px;
+}
+
+h1 i {
+    padding-right: 0px;
+}
+
+aside a.selected {
+    padding-left: 9px;
+    border-left: 5px solid;
+    border-color: #1dba54;
+}
+
+
+
+/* Your Code Here */
+
+
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+/* Your Code Here */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 15px;
+    padding-right: 30px;
+}
+
+header a {
+    padding: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 30px;
+    border-radius: 15px;
+}
+
+#upgrade {
+    color: #919191;
+    border: solid 2px #919191;
+    background-color: #111;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#profile {
+    color: #919191;
+    background-color: #222222;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0px;
+    margin-top: 80px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+nav a {
+    padding: 0px;
+    margin: 12px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+}
+
+nav a.selected {
+    border-bottom: 5px solid;
+    border-color: #1dba54;
+}
+
+nav a:hover {
+    border-bottom: 5px solid;
+    border-color: #1dba54;
+}
+
+a#upgrade:hover { 
+    background-color: #1b1b1b;
+}
+
+a#profile:hover { 
+    background-color: #1c1c1c;
+}
+
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+/* Your Code Here */
+
+#featured-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    width: 17.5%;
+    height: auto;
+    border-radius: 10px;
+    background: #222222;;
+    padding: 20px;
+    margin: 6px;
+}
+
+#featured-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+ 
+#featured-content h2 {
+    font-size: 13px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#featured-content p {
+    font-size: 12px;
+    margin-top: 5px;
+    padding-top: 0px;
+    color: #919191;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+button {
+    color: #fff;
+    background-color: #0b9b4b;
+    border: 0px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    float: right;
+}
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+/* Your Code Here */
+
+@media only screen and (max-width: 1000px) {
+    
+    .artist-card {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #sidebar {
+        display: none;
+    }
+
+    header {
+        padding: 20px;
+        width: 100vw;
+        margin: 0px;
+        left: auto;
+    }
+
+    header a {
+        margin: 0px;
+    }
+
+    #profile {
+        padding: 5px;
+    }
+
+    #upgrade {
+        display: none;
+    }
+    
+    body {
+        overflow: hidden;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 100px;
+        grid-template-areas:
+            "main"
+           "bottom";
+        height: 100vh;
+    }
+    
+    .artist-card {
+        width: 47%;
+    }
+   
+}
+    
+    
+   
+
