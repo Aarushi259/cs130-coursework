@@ -3,7 +3,7 @@
     <head>
         <!-- stylesheets and metadata go here -->
         <title>Homepage</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="stocks_style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/4359894a70.js" crossorigin="anonymous"></script>
@@ -16,7 +16,6 @@
         <link href="https://cdn.anychart.com/releases/8.11.0/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
         <link href="https://cdn.anychart.com/releases/8.11.0/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
 
-        <script src="nasdaq.js"> defer </script>
         
     </head>
     
@@ -25,9 +24,10 @@
         <!-- HTML content tags go here -->
         <nav class="navbar">
             <a href="index.html">S&P 500</a>
-            <strong>NASDAQ 100</strong>
+            <a href="nasdaq.html">NASDAQ 100</a>
             <a href="dow_jones.html">Dow Jones</a>
-            <a href="stock.html">Stock Screener</a>
+            <strong>Stock Screener</strong>
+            <input type="search" placeholder="Search by Ticker" id="search" value="" aria-label="Search bar" />
         </nav>
         <main>
             <h1><i class="fa-solid fa-location-crosshairs"></i>Investo</h1>
@@ -36,8 +36,12 @@
                 <div id="container">
                 </div>
             </article>
+            <div id="info">
+            </div>
         </main>
     </body>
+    <script src="stocks.js"> </script>
+        
 </html>
 
 
