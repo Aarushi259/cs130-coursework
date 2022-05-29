@@ -4,6 +4,7 @@ const search = (ev) => {
     console.log("search for:", term);
     console.log(term);
     document.querySelector("#container").innerHTML = "";
+    document.querySelector("#info").innerHTML = "";
     getData(term);
     getInfo(term);
     if (ev) {
