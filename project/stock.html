@@ -23,21 +23,24 @@
         
         <!-- HTML content tags go here -->
         <nav class="navbar">
-            <a href="index.html">S&P 500</a>
-            <a href="nasdaq.html">NASDAQ 100</a>
-            <a href="dow_jones.html">Dow Jones</a>
-            <strong>Stock Screener</strong>
-            <input type="search" placeholder="Search by Ticker" id="search" value="" aria-label="Search bar" />
+            <a href="index.html" class="btn">S&P 500</a>
+            <a href="nasdaq.html" class="btn">NASDAQ 100</a>
+            <a href="dow_jones.html" class="btn">Dow Jones</a>
+            <strong class="btn">Stock Screener</strong>
+            <input type="search" placeholder="Search Ticker" id="search" value="" aria-label="Search bar" class="btn"/>
         </nav>
         <main>
             <h1><i class="fa-solid fa-location-crosshairs"></i>Investo</h1>
             <h2>The first destination in your investing journey</h2>
-            <article id = "featured-graphs">
+            <article id = "featured-content">
                 <div id="container">
                 </div>
+                <div id="info">
+                    <div id = "desc"></div>
+                    <div id="dcf">
+                    </div>
+                </div>               
             </article>
-            <div id="info">
-            </div>
         </main>
     </body>
     <script src="stocks.js"> </script>
